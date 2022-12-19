@@ -1,0 +1,41 @@
+public class Altura {
+
+  static java.util.Scanner in;
+
+  public static boolean casoDePrueba() {
+    int n;
+    n = in.nextInt();
+    if (n == 0 )
+      return false;
+
+    int count = 1;
+    int cuadrado = 0;
+    int sum = 0;
+    int result = 0;
+    
+
+    while (sum < n){
+
+        cuadrado = count * count;
+
+        sum += cuadrado;
+        count+=2;
+        System.out.println(sum);
+        System.out.println(count);
+        result++;
+    }
+    
+    System.out.println(result);
+
+    return true;
+
+  }
+
+  public static void main(String args[]) {
+    in = new java.util.Scanner(System.in);
+    while (casoDePrueba())
+      ;
+
+  }
+
+}
